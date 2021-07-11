@@ -1,0 +1,18 @@
+package org.generation.PersonalBlog.repository;
+
+
+import java.util.List;
+import java.util.Optional;
+
+import org.generation.PersonalBlog.model.Usuario;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
+
+	public Optional<Usuario> findByUsuario(String Usuario);
+
+	public static List<Usuario> findAllByUsuarioIgnoreCaseContaining(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}
